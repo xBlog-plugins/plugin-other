@@ -8,7 +8,7 @@ const keyApp = "app_img"
 const keyH5 = "h5_img"
 
 // 添加卡片
-widget.addSide(false,"其他客户端","index.html",function () {
+widget.addSide("其他客户端","index.html",function () {
     // 返回客户端数据
     return {
         program: tools.getSetting(keyProgram),
