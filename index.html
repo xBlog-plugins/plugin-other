@@ -1,3 +1,16 @@
+<style>
+    .side-other{display:flex;align-items:center}
+    .side-other .item-wechat:hover+#wechat-img{display:block!important}
+    .side-other .item-phone:hover+#phone-img{display:block!important}
+    .side-other .item-h5:hover+#h5-img{display:block!important}
+    #h5-img,#phone-img,.side-other #wechat-img{width:300px;height:300px;transition:all .3s;display:none;position:absolute;z-index:500;margin-left:-77px;margin-top:-400px;box-shadow:0 5px 5px rgba(0,0,0,.2);border-radius:12px}
+    .side-other #phone-img{margin-left:1px}
+    .side-other #h5-img{margin-left:91px}
+    .side-other .item:hover{transform:scale(1.2)}
+    .side-other .item{width:80px;height:80px;margin:10px;display:flex;flex-direction:column;align-items:center;cursor:pointer;transition:all .3s}
+    .side-other .item .item-title{font-size:12px;color:#999}
+    .side-other .item-img{width:40px;height:40px;border-radius:50%;display:flex;justify-content:center;align-items:center;margin-bottom:8px}
+</style>
 <div class="side-other">
     {{if ne .program ""}}
     <div class="item item-wechat">
@@ -27,70 +40,3 @@
     <img id="h5-img" alt src="{{.h5}}">
     {{end}}
 </div>
-
-<style>
-    .side-other{
-        display: flex;
-        align-items: center;
-    }
-    .side-other .item-wechat:hover + #wechat-img {
-        display: block !important;
-    }
-
-    .side-other .item-phone:hover + #phone-img {
-        display: block !important;
-    }
-
-    .side-other .item-h5:hover + #h5-img {
-        display: block !important;
-    }
-
-    .side-other #wechat-img, #phone-img, #h5-img {
-        width: 300px;
-        height: 300px;
-        transition: all .3s;
-        display: none;
-        position: absolute;
-        z-index: 500;
-        margin-left: -77px;
-        margin-top: -400px;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
-        border-radius: 12px;
-    }
-
-    .side-other  #phone-img {
-        margin-left: 1px;
-    }
-
-    .side-other  #h5-img {
-        margin-left: 91px;
-    }
-
-    .side-other .item:hover {
-        transform: scale(1.2);
-    }
-
-    .side-other .item {
-        width: 80px;
-        height: 80px;
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        cursor: pointer;
-        transition: all .3s;
-    }
-    .side-other .item .item-title {
-        font-size: 12px;
-        color: #999;
-    }
-    .side-other .item-img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 8px;
-    }
-</style>
