@@ -17,9 +17,9 @@ widget.addSide("其他客户端","index.html",function () {
     }
 },true)
 // 添加设置信息
-widget.addSetting("更多客户端设置",1,tools.getAdminPluginSetting([
+widget.addSetting("更多客户端设置",1,[
     {title:"小程序二维码",type: "upload",key: keyProgram},
     {title:"安卓二维码",type: "upload",key: keyApp},
     {title:"H5二维码",type: "upload",key: keyH5},
-]))
+])
 
